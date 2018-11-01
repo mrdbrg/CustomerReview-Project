@@ -1,0 +1,89 @@
+<style>
+.textFormat {
+  font-size: 50px;
+  font-style: normal;
+}
+.rating {
+  margin-left: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  display: flex;
+}
+.rating input {
+  display: none
+}
+.rating label {
+  display: block;
+  cursor: pointer;
+  width: 50px;
+  /* background: #ccc */
+}
+.rating label:before 
+{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 50px;
+  color: #81E3D3;
+}
+.rating label:after 
+{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 50px;
+  color: #1f9cff;
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+/* Select start and fill all stars preceding by the selected one */
+.rating label:hover:after,
+.rating label:hover   ~ label:after, 
+.rating input:checked ~ label:after 
+{
+  opacity: 1;
+}
+</style>
+<br>
+  <br><br><br>
+  <div class="col-12 text-white textFormat text-dark">
+    <p class="text-center animated fadeInDown" id="query-text">How satisfied are you with your experience with our sales team ?</p>
+  </div>
+  <br><br><br>
+
+  <div class="animated fadeInUp">
+  <div class="rating">
+    <input type="radio" name="star" id="star1"><label class="animated fadeInUp" for="star1">  
+    </label>
+    <input type="radio" name="star" id="star2"><label class="animated fadeInUp" for="star2">  
+    </label>
+    <input type="radio" name="star" id="star3"><label class="animated fadeInUp" for="star3">  
+    </label>
+    <input type="radio" name="star" id="star4"><label class="animated fadeInUp" for="star4">  
+    </label>
+    <input type="radio" name="star" id="star5"><label class="animated fadeInUp" for="star5">  
+    </label>
+  </div>
+  <div class="row">
+    <div class="col-3 ml-5">
+    </div>
+    <div class="col-m6 text-center ml-5">
+      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 18rem;">
+        <div class="card-body ml-5 btnSlide animated slideInDown">
+          <%= link_to 'Back', first_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark buttonNo ml-4" %>
+          <%= link_to 'Yes', second_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark buttonYes" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</div>
+
+<br><br>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CustomerReview</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.css" />
+    <link href="https://fonts.googleapis.com/css?family=Taviraj:100,100i,200,300" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js" render></script> 
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <style>
+      body {
+        height:
+        margin: 0;
+        padding: 0;
+        background: #ffffff;
+        font-family: 'Taviraj', serif;
+      }
+      #topBar {
+        height: 10px;
+        width: 930px;
+        background: #81E3D3;
+        animation-duration: 1s;
+      }
+      #bottomBar {
+        height: 100px;
+        width: 930px;
+        background: #81E3D3;
+        position: relative;
+        margin-top: 50px;
+        animation-duration: .8s;
+      }
+      .logo {
+        font-size: 30px;
+        font-weight: 200;
+        margin-left: 475px;
+        position: absolute;
+        margin-top: 30px;
+        animation-duration: .5s;
+        animation-delay: .6s;
+      }
+      
+    </style>
+  </head>
+  <body>
+  
+  <div class="container">
+    <div id="topBar" class="animated fadeInDown"></div>
+    <hr class="animated fadeInDown">
+      <%= yield %>
+    <hr class="animated fadeInUp">
+    <div id="bottomBar" class="animated fadeInUp">
+      <p class="text-center logo animated fadeInUp">Tiffany & Co.</p>
+    </div>
+  </div>
+
+  </body>
+</html>

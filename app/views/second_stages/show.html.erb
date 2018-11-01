@@ -1,0 +1,33 @@
+<style>
+.textFormat {
+  font-size: 50px;
+  font-style: normal;
+}
+.btn-outline-dark:hover {
+  background-color: #81E3D3 !important;
+}
+</style>
+<br><br><br>
+  <div class="col-12 text-white textFormat text-dark">
+    <p class="text-center animated fadeInDown" id="query-text">Tell us about your experience or leave us a suggestion to help us improve.</p>
+  </div>
+  <br>
+<form>
+ <div class="form-group">
+    <textarea class="form-control animated zoomIn" id="exampleFormControlTextarea1" rows="5">alsdkhfakljdhfsdfsadfsaf</textarea>
+  </div>
+    <div class="row">
+    <div class="col-3 ml-5">
+    </div>
+    <div class="col-m6 text-center ml-5">
+      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 18rem;">
+        <div class="card-body ml-5 btnSlide animated slideInDown">
+        <%= link_to 'Back', show_rating_options_path(@sale_rep), class: "btn btn-lg btn-outline-dark ml-4" %>
+        <%= link_to 'Yes', third_stages_path, class: "btn btn-lg btn-outline-dark" %>
+        </div>
+      </div>
+    </div>
+    <div class="col-3">
+    </div>
+  </div>
+</form>

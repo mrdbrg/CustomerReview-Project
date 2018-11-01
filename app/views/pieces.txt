@@ -1,0 +1,72 @@
+#cardAnim {
+  animation-duration: .9s;
+  animation-delay: 1s;
+}
+
+.cardPos {
+  top: 400;
+  left: 400;
+  position: absolute;
+}
+<div class="frame"></div> 
+
+.frame {
+  border: solid black 1px;
+  margin-left: -10px;
+  height: 450px;
+  width: 420px;
+  top: 400;
+  left: 400;
+  position: relative;
+}
+
+ <script>
+
+    document.addEventListener('turboLinks:request-start', function(){
+      document.querySelector('.container').classList.add('fadout');
+    });
+
+    document.addEventListener('turboLinks:render', function(){
+      document.querySelector('.container').classList.add('fadin');
+    });
+  </script>
+
+
+
+  ROUTES FOR second_stages (index)
+  <%= link_to 'Back', first_stage_show_path(first_stage), class: "btn btn-lg btn-outline-dark ml-4 "%> 
+  <%= link_to 'Next', second_stage_show_path(second_stage), class: "btn btn-lg btn-outline-dark" %>
+
+
+
+ <script>
+  $(function(){
+  //OnClick Event
+  $('.buttonYes').click(function(){
+    animate('#cardAnim', 'fadeOutUp');
+    return false
+  });
+
+  $('.buttonNo').click(function(){
+    animate('#cardAnim', 'fadeOutDown');
+    return false;
+  })
+
+  //Animate Function
+  function animate(element, animation) {
+    $(element).addClass('animated '+animation);
+
+    let wait = setTimeout(function(){
+      $(element).removeClass('animated '+animation);
+    }, 1000);
+  }
+  })
+  </script>
+
+1) form_with(url:)
+  choose where it's gonna go and I will need a page to respond to the form.
+  The responding page will require the sale_rep id (params) with the id 
+  we're loading the sale_rep from the database and display their informatino on the page.
+
+2)
+<%= form.submit "Next", class: "btn btn-lg btn-outline-dark" %>

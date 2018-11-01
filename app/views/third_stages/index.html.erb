@@ -1,0 +1,45 @@
+<style>
+.textFormat {
+  font-size: 50px;
+  font-style: normal;
+}
+#hashTags {
+  font-size: 30px;
+  font-style: normal;
+}
+.hashOne {
+  animation-duration: .9s;
+  animation-delay: 1s;
+
+}
+.hashTwo {
+  animation-duration: .9s;
+  animation-delay: 1.2s;
+}
+.hashThree {
+  animation-duration: .9s;
+  animation-delay: 1.4s;
+}
+.necklaceImg {
+  animation-duration: .5s;
+  animation-delay: .8s;
+}
+
+
+</style>
+<div class="col-12 text-white textFormat hashTags text-dark">
+  <p class="text-center animated fadeInDown">Thank You for shopping at Tiffany & Co.</p>
+   <div class="row">
+    <div class="col-3 ml-5">
+    </div>
+    <div class="col-m6 text-center ml-5">
+      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 18rem;">
+        <img class="card-img-top necklaceImg" alt="Card image cap" src="<%= image_path("return.png") %>" style="width: 400px;">
+      </div>
+    </div>
+  </div>
+
+  <p class="text-center animated fadeInUp hashOne" id="hashTags">#tiffany&co</p>
+  <p class="text-center animated fadeInUp hashTwo" id="hashTags">#breakfastattiffanys</p>
+  <p class="text-center animated fadeInUp hashThree" id="hashTags">#tiffanyblue</p>
+</div>
