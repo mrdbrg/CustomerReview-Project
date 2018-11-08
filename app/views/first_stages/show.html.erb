@@ -2,12 +2,12 @@
 .thisImage {
   border-radius: 15px;
   margin-left: -10px;  
-  width: 300px; 
-  height: 300px;
+  width: 400px; 
+  height: 400px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .textFormat {
-  font-size: 40px;
+  font-size: 50px;
   font-style: normal;
   margin-left: -10px;
 }
@@ -25,7 +25,7 @@
 }
 </style>
 
-<br><br><br><br>
+<br><br>
 <div id="query-1">
   <div class="row">
     <div class="col-2">
@@ -40,7 +40,7 @@
     <div class="col-3 ml-5">
     </div>
     <div class="col-m6 text-center ml-5">
-      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 16rem;">
+      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 22rem;">
         <img class="card-img-top thisImage" alt="Card image cap" src="<%= @sale_rep.photo_url %>">
         <div class="card-body ml-5 btnSlideUp animated fadeInUp">
         <%= link_to 'No', first_stages_path, class: "btn btn-lg btn-outline-dark" %>
@@ -49,4 +49,4 @@
       </div>
     </div>
   </div>
-  <br><br><br><br><br><br>
+  <br><br><br>
