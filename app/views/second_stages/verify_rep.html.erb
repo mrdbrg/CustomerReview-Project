@@ -4,7 +4,7 @@
   font-style: normal;
 }
 .rating {
-  margin-left: 300px;
+  margin-left: 250px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotateY(180deg);
@@ -49,6 +49,9 @@
   margin-top: -50px;
   margin-left: -25px;
 }
+.btnMargin {
+  margin-left: 20px;
+}
 .btn-outline-dark:hover {
   background-color: #81E3D3 !important;
 }
@@ -61,12 +64,11 @@
   opacity: 1;
 }
 </style>
-<br>
-  <br><br><br>
+<br><br><br><br><br><br><br><br>
   <div class="col-12 text-white textFormat text-dark">
     <p class="text-center delayThis animated fadeInDown" id="query-text">How satisfied are you with your experience with our sales team ?</p>
   </div>
-  <br><br><br>
+  <br><br>
 
   <div class="delayThis animated fadeInUp">
   <div class="rating">
@@ -81,11 +83,12 @@
     <input type="radio" name="star" id="star5"><label class="animated fadeInUp" for="star5">  
     </label>
   </div>
+  <br>
   <div class="row squeeze">
     <div class="col-3 ml-5">
     </div>
     <div class="col-m6 text-center ml-5">
-      <div class="card border-0 delayThis animated fadeInUp" id="cardAnim" style="width: 18rem;">
+      <div class="card border-0 delayThis animated fadeInUp btnMargin" style="width: 18rem;">
         <div class="card-body ml-5">
           <%= link_to 'Return', first_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark ml-4" %>
           <%= link_to 'Rate', second_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark" %>
@@ -94,4 +97,4 @@
     </div>
   </div>
 </div>
-<br><br><br>
+<br><br><br><br><br><br>
