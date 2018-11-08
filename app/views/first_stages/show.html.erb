@@ -1,21 +1,22 @@
 <style>
 .thisImage {
   border-radius: 15px;
-  margin-left: -35px;  
+  margin-left: -10px;  
+  width: 300px; 
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 .textFormat {
-  font-size: 50px;
+  font-size: 40px;
   font-style: normal;
+  margin-left: -10px;
 }
-#query-open-1, #query-open-2 {
-  animation-duration: 1s;
-  animation-delay: 1s;
+#query-open-1 {
+  animation-duration: .8s;
+  animation-delay: .8s;
   margin-left: 30px;
 }
-#buttonNo, #buttonYes {
-  border-radius: 0px;
-}
-.btnSlide {
+.btnSlideUp {
   animation-duration: .8s;
   animation-delay: 1s;
 }
@@ -38,13 +39,12 @@
     <div class="col-3 ml-5">
     </div>
     <div class="col-m6 text-center ml-5">
-      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 18rem;">
-        <img class="card-img-top thisImage" alt="Card image cap" src="<%= @sale_rep.photo_url %>" style="width: 400px;">
-        <div class="card-body ml-5 btnSlide animated slideInDown">
-        <%= link_to 'Back', first_stages_path, class: "btn btn-lg btn-outline-dark buttonNo ml-4" %>
-        <%= link_to 'Next', show_rating_options_path(@sale_rep), class: "btn btn-lg btn-outline-dark buttonYes" %>
+      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 16rem;">
+        <img class="card-img-top thisImage" alt="Card image cap" src="<%= @sale_rep.photo_url %>">
+        <div class="card-body ml-5 btnSlideUp animated fadeInUp">
+        <%= link_to 'No', first_stages_path, class: "btn btn-lg btn-outline-dark" %>
+        <%= link_to 'Yes', show_rating_options_path(@sale_rep), class: "btn btn-lg btn-outline-dark" %>
         </div>
       </div>
     </div>
   </div>
-  <br><br>

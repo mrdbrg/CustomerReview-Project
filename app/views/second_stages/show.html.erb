@@ -6,8 +6,11 @@
 .btn-outline-dark:hover {
   background-color: #81E3D3 !important;
 }
+.commentBtn {
+  margin-left: -100px;
+}
 </style>
-<br><br><br>
+<br><br><br><br>
   <div class="col-12 text-white textFormat text-dark">
     <p class="text-center animated fadeInDown" id="query-text">Tell us about your experience or leave us a suggestion to help us improve.</p>
   </div>
@@ -20,14 +23,12 @@
     <div class="col-3 ml-5">
     </div>
     <div class="col-m6 text-center ml-5">
-      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 18rem;">
+      <div class="card border-0 commentBtn animated fadeInUp" style="width: 28rem;">
         <div class="card-body ml-5 btnSlide animated slideInDown">
-        <%= link_to 'Back', show_rating_options_path(@sale_rep), class: "btn btn-lg btn-outline-dark ml-4" %>
-        <%= link_to 'Yes', third_stages_path, class: "btn btn-lg btn-outline-dark" %>
+        <%= link_to 'Return', show_rating_options_path(@sale_rep), class: "btn btn-lg btn-outline-dark ml-4" %>
+        <%= link_to 'Leave Comment', third_stages_path, class: "btn btn-lg btn-outline-dark" %>
         </div>
       </div>
-    </div>
-    <div class="col-3">
     </div>
   </div>
 </form>

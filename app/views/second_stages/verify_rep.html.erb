@@ -41,6 +41,17 @@
   transition: .5s;
   text-shadow: 0 2px 5px rgba(0,0,0,.5);
 }
+.delayThis {
+  animation-duration: .8s;
+  animation-delay: .5s;
+}
+.squeeze {
+  margin-top: -50px;
+  margin-left: -25px;
+}
+.btn-outline-dark:hover {
+  background-color: #81E3D3 !important;
+}
 
 /* Select start and fill all stars preceding by the selected one */
 .rating label:hover:after,
@@ -53,11 +64,11 @@
 <br>
   <br><br><br>
   <div class="col-12 text-white textFormat text-dark">
-    <p class="text-center animated fadeInDown" id="query-text">How satisfied are you with your experience with our sales team ?</p>
+    <p class="text-center delayThis animated fadeInDown" id="query-text">How satisfied are you with your experience with our sales team ?</p>
   </div>
   <br><br><br>
 
-  <div class="animated fadeInUp">
+  <div class="delayThis animated fadeInUp">
   <div class="rating">
     <input type="radio" name="star" id="star1"><label class="animated fadeInUp" for="star1">  
     </label>
@@ -70,20 +81,17 @@
     <input type="radio" name="star" id="star5"><label class="animated fadeInUp" for="star5">  
     </label>
   </div>
-  <div class="row">
+  <div class="row squeeze">
     <div class="col-3 ml-5">
     </div>
     <div class="col-m6 text-center ml-5">
-      <div class="card border-0 animated fadeInUp" id="cardAnim" style="width: 18rem;">
-        <div class="card-body ml-5 btnSlide animated slideInDown">
-          <%= link_to 'Back', first_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark buttonNo ml-4" %>
-          <%= link_to 'Yes', second_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark buttonYes" %>
+      <div class="card border-0 delayThis animated fadeInUp" id="cardAnim" style="width: 18rem;">
+        <div class="card-body ml-5">
+          <%= link_to 'Return', first_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark ml-4" %>
+          <%= link_to 'Rate', second_stage_path(@sale_rep), class: "btn btn-lg btn-outline-dark" %>
         </div>
       </div>
     </div>
-    <div class="col-3">
-    </div>
   </div>
 </div>
-
-<br><br>
+<br><br><br>
