@@ -7,11 +7,17 @@
   animation-duration: .8s;
   animation-delay: .8s;
 }
+.btn-outline-dark {
+  margin-left: 10px;
+}
 .btn-outline-dark:hover {
   background-color: #81E3D3 !important;
 }
+.margin {
+  margin-left: 50px;
+}
 </style>
-<br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 <div class="col-12 text-white textFormat text-dark">
   <p class="text-center selectText animated fadeInDown" id="query-open-1">Please, select the sale representative who assisted you today.</p>
 </div>
@@ -22,7 +28,7 @@
     <div class="col-m6 text-center ml-5">
       <div class="card border-0 btnRep animated fadeInUp" id="cardAnim" style="width: 18rem;">
         <div class="card-body ml-5">
-          <%= form_with url: '/first_stages/verify_rep', local: true do |f| %>
+          <%= form_with url: '/first_stages/verify_rep', class: 'margin' , local: true do |f| %>
           <%= f.select :sales_rep, SaleRep.all.collect { |rep| [ rep.first_name+" "+rep.last_name, rep.id ] }, { class: 'dropdown-menu dropdown-item', prompt: "Find Representative", include_blank: true } %>
           <br><br>
           <%= f.submit 'Leave Review', :class => 'btn btn-lg btn-outline-dark'%>
@@ -35,5 +41,5 @@
   </div>
 
 
-<br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
