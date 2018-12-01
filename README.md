@@ -1,24 +1,9 @@
-# README
+#### Copyright (c) 2015 by MARLON RODRIGO DIAS BRAGA. All Rights Reserved.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+#### Web Application Description
 
-Things you may want to cover:
+This web application is a customer review app that would assist Tiffany & Co. to gather data on customers by asking for their review on the sales associate who assisted them and give them the option of leaving a feedback to the store.
 
-* Ruby version
+The focus of this idea was to have on the customer's receipt a code/barcode that would be used by a device (a bar code scanner) attached to an ipad/tablet. This barcode scanner would scan the code/barcode on the customer's receipt retrieving from the company's database the picture of the sales associate related to that code/barcode on the receipt. The sales associate image would then be displayed on the screen
 
-* System dependencies
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
