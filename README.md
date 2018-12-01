@@ -10,6 +10,9 @@ Between the 5 stars rating and the final "Thank you" message however, another op
 
 Instead of the use of an external device for the scanning process, another solution could also be the use of a camera device either also external or internal form the ipad/tablet device. This way keeping it all in one device.
 
-By conne
+In terms of backend, the database where the photos and the sales associate's name would be retrieved to display on the device would be connected to another database where their evaluation/average points would be stored to futher analysis of their performance based on the reviews collected by customers. The general store feedback would also be stored in another database for future analysis. 
 
+Another interesting idea to implement on this application: every customer is requested to fill out a form when they make a purchase. They fill this form with name, country, address, etc... this data could be stored on the company's database as has always been (or implement a new database to accompanied the others) and through the creation of a relationship between all or some of the databases, right upon code/barcode reading the app could dynamically change the language of the questions that will be asked to the customers based on the form they have previously filled. This way will facilitate the delivery of what it's expected from them. Improving communication and broadening the reviews.
+
+This is could be described as userfriendly metrics management system. Thus collecting precious information on customers feedback and staff performance. It will also increase engagement of brand ambassadors with customers.
 
